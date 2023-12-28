@@ -29,3 +29,30 @@ sc.close();
 }
 }
 
+
+
+
+OUTPUT:
+
+
+
+
+(base) computer@computer-Th:~$ javac Lba.java
+(base) computer@computer-Th:~$ java Lba
+3
+10
+4
+2
+Query1:
+Space left in bucket:10
+Packet added to bucket.Buffer size:4
+Query2:
+Space left in bucket:6
+Packet added to bucket.Buffer size:8
+Query3:
+Space left in bucket:2
+Packet loss =4
+Packet removed from bucket.Buffer size:6
+
+(base) computer@computer-Th:~$ ^C
+
