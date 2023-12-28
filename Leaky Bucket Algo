@@ -1,0 +1,31 @@
+import java.util.*;
+public class Lba {
+
+public static void main(String[] args) {
+
+Scanner sc = new Scanner(System.in);
+int q = sc.nextInt();
+int b = sc.nextInt();
+int p = sc.nextInt();
+int o = sc.nextInt();
+int strg=0;
+for(int i=0;i<q;i++)
+{
+int size_left = b - strg;
+System.out.println("Query" + (i+1) + ":");
+System.out.println("Space left in bucket:" +size_left);
+if(p<size_left) {
+strg+=p;
+System.out.println("Packet added to bucket.Buffer size:"+strg);
+}
+else {
+System.out.println("Packet loss ="+p);
+strg=Math.max(o,strg-o);
+System.out.println("Packet removed from bucket.Buffer size:"+strg);
+System.out.println();
+}
+}
+sc.close();
+}
+}
+
