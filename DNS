@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.io.*;
+import java.net.*;
+public class DNS {
+	public static void main(String[] args) throws UnknownHostException {
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter host name: ");
+        String host = sc.next();
+        try {
+        	InetAddress[] iaddress = InetAddress.getAllByName(host);
+        	for(InetAddress ipaddress:iaddress) {
+        	System.out.println(ipaddress.toString());		
+        	}
+        }
+        catch(UncheckedIOException e) {
+        	System.out.println(e);
+        }
+	}
+}
+
+
+
+output:
+
+Enter host name: www.google.com
+www.google.com/142.250.76.68
+www.google.com/2404:6800:4007:815:0:0:0:2004
